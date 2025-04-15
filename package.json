@@ -2,22 +2,36 @@
   "name": "rate-repository-app",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
-  "type": "module",
   "scripts": {
+    "tsc": "tsc",
+    "prettier": "prettier --write ./src/**/*.{js,jsx,ts,tsx,json,css,scss,html} App.js",
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
+    "android": "DARK_MODE=media expo start --android",
+    "ios": "DARK_MODE=media expo start --ios",
+    "web": "DARK_MODE=media expo start --web",
     "lint": "eslint ./src/**/*.{js,jsx} App.js --no-error-on-unmatched-pattern"
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.1.1",
+    "@gluestack-ui/icon": "^0.1.27",
+    "@gluestack-ui/nativewind-utils": "^1.0.26",
+    "@gluestack-ui/overlay": "^0.1.22",
+    "@gluestack-ui/toast": "^1.0.9",
+    "@types/react": "~18.2.45",
+    "babel-plugin-module-resolver": "^5.0.2",
     "expo": "~50.0.17",
     "expo-status-bar": "~1.11.1",
+    "nativewind": "^4.1.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.73.6",
-    "react-native-web": "~0.19.6"
+    "react-native-css-interop": "^0.1.22",
+    "react-native-reanimated": "^3.17.3",
+    "react-native-safe-area-context": "^5.4.0",
+    "react-native-svg": "^15.2.0",
+    "react-native-web": "~0.19.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -27,7 +41,9 @@
     "eslint": "^9.24.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-native": "^5.0.0",
-    "globals": "^16.0.0"
+    "globals": "^16.0.0",
+    "jscodeshift": "^0.15.2",
+    "typescript": "^5.8.3"
   },
   "private": true
 }
